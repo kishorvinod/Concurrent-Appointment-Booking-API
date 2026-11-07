@@ -1,0 +1,24 @@
+{
+  "name": "concurrent-appointment-booking-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Concurrency-safe doctor appointment booking assessment",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "db:setup": "node scripts/setup-database.js",
+    "test:concurrent": "node tests/concurrent-booking.js",
+    "test:integration": "node tests/integration.js"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "mssql": "^11.0.1",
+    "cors": "^2.8.5",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
