@@ -1,0 +1,40 @@
+{
+  "executedAt": "2026-11-07T10:13:35.796Z",
+  "total": 7,
+  "results": [
+    {
+      "name": "Serves OpenAPI Swagger UI generated from route annotations",
+      "result": "passed"
+    },
+    {
+      "name": "Rejects missing or invalid request IDs",
+      "result": "passed"
+    },
+    {
+      "name": "Reports an unknown patient and does not book the slot",
+      "result": "passed"
+    },
+    {
+      "name": "Reports an unknown slot",
+      "result": "passed"
+    },
+    {
+      "name": "Creates one booking and rejects a sequential duplicate",
+      "result": "passed"
+    },
+    {
+      "name": "Rolls back a claimed slot when the appointment insert fails",
+      "result": "passed"
+    },
+    {
+      "name": "Allows exactly one of 20 simultaneous requests",
+      "result": "passed",
+      "details": {
+        "requests": 20,
+        "created": 1,
+        "conflicts": 19,
+        "appointmentsForSlot101": 1
+      }
+    }
+  ]
+}
